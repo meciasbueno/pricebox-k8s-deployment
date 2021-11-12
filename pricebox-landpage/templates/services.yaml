@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: pricebox-landpage-app-clusterip
+spec:
+  selector:
+    app: pricebox-landpage-app
+    restype: pod
+  ports:
+  - port: 80
+    targetPort: 8000
+    protocol: TCP
+  type: ClusterIP

@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pricebox-loja-app-nuxt-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pricebox-loja-app-nuxt
+      restype: pod
+  template:
+    metadata:
+      labels:
+        app: pricebox-loja-app-nuxt
+        restype: pod
+    spec:
+      containers:
+      - image: registry.gitlab.com/pricebox/pricebox-loja-app-nuxt:main
+        name: pricebox-loja-app-nuxt
+        ports:
+        - containerPort: 8000
+          name: http
+        resources:
+          limits:
+            cpu: "250m"
+            memory: "1Gi"
+          requests:
+            cpu: "150m"
+            memory: "600Mi"
+        imagePullPolicy: Always
+      imagePullSecrets:
+      - name: docker-gitlab
+      restartPolicy: Always
