@@ -15,7 +15,7 @@ spec:
         restype: pod
     spec:
       containers:
-      - image: registry.gitlab.com/pricebox/pricebox-landpage-app:master
+      - image: registry.gitlab.com/pricebox/pricebox-landpage-app:fix-fibers
         name: pricebox-landpage-app
         ports:
         - containerPort: 8000

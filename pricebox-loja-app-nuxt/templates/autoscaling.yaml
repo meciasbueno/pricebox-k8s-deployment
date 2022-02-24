@@ -7,8 +7,10 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: pricebox-loja-app-nuxt-deploy
-  minReplicas: 2
-  maxReplicas: 3
+  minReplicas: 1
+  maxReplicas: 1
+  # minReplicas: 2
+  # maxReplicas: 3
   metrics:
   - type: Resource
     resource:

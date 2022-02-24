@@ -1,5 +1,5 @@
-kind: Ingress
 apiVersion: extensions/v1beta1
+kind: Ingress
 metadata:
   name: pricebox-landpage-app
   annotations:
@@ -7,7 +7,7 @@ metadata:
     # nginx.ingress.kubernetes.io/proxy-body-size: "25m"
 spec:
   rules:
-  - host: "landpage.meciasbueno.cloud.okteto.net"
+  - host: "localhost"
     http:
       paths:
       - backend:
