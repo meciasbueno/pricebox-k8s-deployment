@@ -1,10 +1,16 @@
-# pricebox-k8s-deployment
-Arquivos de deploy da aplicação Pricebox (apenas landingpage) no Kubernetes com o objetivo de estudos
+
+# Pricebox - deploy Kubernetes
+Arquivos de deploy da aplicação Pricebox (apenas landingpage) no Kubernetes com o objetivo de estudos.
+Feito por: Mecias Bueno da Fonseca (meciasbueno@gmail.com)
 
 ### Instalações
  - Instalação do wsl2 e minikube: https://github.com/codeedu/wsl2-kubernetes
  - Instalação do kubectl: https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
-
+ - Comandos úteis:
+	 - sudo service docker start (iniciar o docker no ubuntu on wsl2)
+	 - minikube start (inicia o minikube e levanta o cluster local)
+	 - minikube start (para o minikube)
+  
 ### Passos iniciais para deploy
 
  - Criar a namespace, caso não existir:
